@@ -1,5 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPB 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-11-28T00:00:00+08:00</updated><entry><title>w12</title><link href="./w12.html" rel="alternate"></link><published>2016-11-28T00:00:00+08:00</published><updated>2016-11-28T00:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2016-11-28:./w12.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPB 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-01-09T00:00:00+08:00</updated><entry><title>w18期末考週</title><link href="./w18qi-mo-kao-zhou.html" rel="alternate"></link><published>2017-01-09T00:00:00+08:00</published><updated>2017-01-09T00:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2017-01-09:./w18qi-mo-kao-zhou.html</id><summary type="html">&lt;p&gt;w17
+元旦補假
+w18
+程式製作真的對我而言是頗為艱深，不過真的還滿有趣，希望能學到更多。&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W16</title><link href="./w16.html" rel="alternate"></link><published>2016-12-26T00:00:00+08:00</published><updated>2016-12-26T00:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2016-12-26:./w16.html</id><summary type="html">&lt;p&gt;W16 &lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="ex1"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+form browser import alert
+form browser import document
+form browser import html
+import random
+#print("test")
+#alert("test")
+con1 = document["con"]
+#1. 利用亂數模組產生標準答案
+標準答案 = random.randint(1,100)
+#2. 取得使用者所猜的整數 (可以使用 try except )
+#con1 &lt;= str(標準答案)
+
+'''
+try:
+    for i in range(1):
+        #con1 &lt;= "test" + "&lt;br/&gt;"
+        yourInpot = int(input("請輸入一個整數！"))
+        #con1 &lt;= "test" + html.BR()
+        output = yourInput + 1
+        con1 &lt;= "你輸入的整數加上 1 之後 , 為" + str(output)
+except:
+    con1 &lt;= "請輸入整數！"
+'''
+
+def b1(e):
+    alert("click")
+document["b1"].bind("click",b1)
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id = "b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W15</title><link href="./w15.html" rel="alternate"></link><published>2016-12-19T00:00:00+08:00</published><updated>2016-12-19T00:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2016-12-19:./w15.html</id><summary type="html">&lt;p&gt;W15&lt;/p&gt;
+&lt;p&gt;教學影片重點 : &lt;/p&gt;
+&lt;p&gt;leo 檔案 &amp;amp; setting 節點用法?
+結合複製指令，選擇一個或多個物件同步進行相同指令。&lt;/p&gt;
+&lt;p&gt;如何複製或搬運 leo 節點? 有哪些快捷鍵?&lt;/p&gt;
+&lt;p&gt;Ctrl + i = 新增節點 
+Ctrl + u = 節點上移 
+Ctrl + d = 節點下移 
+Ctrl + l = 節點左移 
+Ctrl + r = 節點右移&lt;/p&gt;
+&lt;p&gt;1.@path 節點指令用法&lt;/p&gt;
+&lt;p&gt;可在節點指令後註記標題，表示節點的路徑關係。&lt;/p&gt;
+&lt;p&gt;2@edit &amp;amp; @auto節點指令用法&lt;/p&gt;
+&lt;p&gt;兩者皆為導入外部檔案"標題指令"，建立起Leo內部與外部檔案的關係。&lt;/p&gt;
+&lt;p&gt;不同的地方在於 @edit 讀取內容不會自動分割節點，而 @auto 會自動分割節點。&lt;/p&gt;
+&lt;p&gt;3.@others 節點指令用法&lt;/p&gt;
+&lt;p&gt;此節點下屬所有子節點的內容，當 @other 改變位置時，所對應的子節點也相應移位。&lt;/p&gt;
+&lt;p&gt;p.s.可利用節點將雜亂的程式碼分割成數個子節點，針對各別修改需求尋找子節點。&lt;/p&gt;
+&lt;p&gt;節點標題與程式碼內容互不影響。&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W14</title><link href="./w14.html" rel="alternate"></link><published>2016-12-12T00:00:00+08:00</published><updated>2016-12-12T00:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2016-12-12:./w14.html</id><summary type="html">&lt;p&gt;Brython 開始練習&lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="ex1"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+container = doc ['ex1']
+
+total = 0.0
+myHeight=float(input("Enter your height(cm): "))
+total = total + (myHeight / 100) ** 2
+myWeight=float(input("Enter your weight(kg): "))
+total = myWeight / total
+myBMI = total
+#BMI值取至小數點第一位
+myBMI = round(myBMI,1)
+
+container &lt;= 'myBMI'
+&lt;/script&gt;
+
+&lt;pre class="brush: python"&gt;
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+&lt;div id="ex1"&gt;&lt;/div&gt;
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+container = doc ['ex1']
+
+total = 0.0
+myHeight=float(input("Enter your height(cm): "))
+total = total + (myHeight / 100) ** 2
+myWeight=float(input("Enter your weight(kg): "))
+total = myWeight / total
+myBMI = total
+#BMI值取至小數點第一位
+myBMI = round(myBMI,1)
+
+container &lt;= 'myBMI'
+&lt;/script&gt;
+&lt;/pre&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="ex2"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc ['ex2']
+mystring = input("要印出甚麼字串?")
+mynum = input("要印出幾次?")
+for i in range(int(mynum)):
+    container &lt;= mystring + html.BR()
+&lt;/script&gt;
+
+&lt;pre class="brush: python"&gt;
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+&lt;div id="ex2"&gt;&lt;/div&gt;
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc ['ex2']
+mystring = input("要印出甚麼字串?")
+mynum = input("要印出幾次?")
+for i in range(int(mynum)):
+    container &lt;= mystring + html.BR()
+&lt;/script&gt;
+&lt;/pre&gt;</summary><category term="Brython"></category></entry><entry><title>W13</title><link href="./w13.html" rel="alternate"></link><published>2016-12-05T12:00:00+08:00</published><updated>2016-12-05T12:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2016-12-05:./w13.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
+
+
+&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;canvas id="chord1" width="600" height="600"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import math
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
+
+def canvasText(x, y, fontSize, string, sup, sub, color, ctx):
+    ctx.beginPath()
+    ctx.fillStyle = color
+    ctx.strokeStyle = color
+    #ctx.font = "20px Arial"
+    ctx.font = str(fontSize)+ "px Arial"
+    ctx.fillText(string, x, y)
+    ctx.font = str(fontSize-8)+ "px Arial"
+    if sup != "":
+        ctx.fillText(sup, x+fontSize/1.6, y-fontSize/2)
+    if sub != "":
+        ctx.fillText(sup, x+fontSize/1.6, y)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+# 設法利用運算印出吉他各把位的音名
+def doreme(x, y, fontSize, order, ctx):
+    # 讓音名數列可以每 12 音名後, 升高 key 後從頭開始
+    if order &gt; 12:
+        order = order % 12
+    if order == 1:
+        canvasText(x, y, fontSize, "A", "", "", "black", ctx)
+    elif order ==2:
+        canvasText(x, y, fontSize, "B", "b", "", "red", ctx)
+    elif order == 3:
+        canvasText(x, y, fontSize, "B", "", "", "black", ctx)
+    elif order == 4:
+        canvasText(x, y, fontSize, "C", "", "", "black", ctx)
+    elif order == 5:
+        canvasText(x, y, fontSize, "D", "b", "", "red", ctx)
+    elif order == 6:
+        canvasText(x, y, fontSize, "D", "", "", "black", ctx)
+    elif order == 7:
+        canvasText(x, y, fontSize, "E", "b", "", "red", ctx)
+    elif order == 8:
+        canvasText(x, y, fontSize, "E", "", "", "black", ctx)
+    elif order == 9:
+        canvasText(x, y, fontSize, "F", "", "", "black", ctx)
+    elif order == 10:
+        canvasText(x, y, fontSize, "G", "b", "", "red", ctx)
+    elif order == 11:
+        canvasText(x, y, fontSize, "G", "", "", "black", ctx)
+    elif order == 12:
+        canvasText(x, y, fontSize, "A", "b", "", "red", ctx)
+    else:
+        canvasText(x, y, fontSize, "A", "b", "", "red", ctx)
+
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()    
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx.lineWidth = 1
+        ctx.moveTo(x-1, y+i*yinc)
+        ctx.lineTo(x+xnum*xinc+1, y+i*yinc)        
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+    # 垂直線
+    for i in range(xnum+1):
+        ctx.beginPath()    
+        ctx.lineWidth = 1
+        ctx.moveTo(x+i*xinc, y)
+        ctx.lineTo(x+i*xinc, y+ynum*yinc)        
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+    # 標定各弦音符號, 以及把位編號
+    ctx.beginPath()
+    ctx.fillStyle = 'black'
+    ctx.strokeStyle = "black"
+    ctx.font = "20px Arial"
+    sixString = ["E", "A", "D", "G", "B", "E"]
+    stringNum = 0
+    for i in sixString:
+        ctx.fillText(i, x-7+stringNum*xinc, y-15)
+        stringNum = stringNum + 1
+    num = 1
+    for j in range(1,20,1):
+        ctx.fillText(j,15,95+num*yinc)
+        num = num + 1
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+    firstBar = [8, 1, 6, 11, 3, 8]
+    for j in range(19):
+        fontSize = 15 
+        for k in range(6):
+            bx = x + (k)*w - fontSize/3
+            by = y + (j)*h+h/2 + fontSize/2
+            order = firstBar[k] + j + 1
+            doreme(bx, by, fontSize, order, ctx)
+
+w = 20
+h = 25
+background(50, 100, w, h, 5, 19, ctx)
+&lt;/script&gt;
+
+&lt;/pre&gt;</summary><category term="Brython"></category></entry><entry><title>w12</title><link href="./w12.html" rel="alternate"></link><published>2016-11-28T00:00:00+08:00</published><updated>2016-11-28T00:00:00+08:00</updated><author><name>40523237</name></author><id>tag:,2016-11-28:./w12.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
 
 
 &lt;p&gt;繪圖流程,導入資料庫,啟動,然後引用各種模組開始繪圖&lt;/p&gt;
